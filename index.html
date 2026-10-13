@@ -4,220 +4,467 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For My Mass 🤎</title>
+  <meta name="theme-color" content="#f8f1e9">
+  <title>For My Favorite Person ♡</title>
 
   <style>
     * {
       box-sizing: border-box;
     }
 
+    :root {
+      --cream: #f8f1e9;
+      --paper: #fffaf4;
+      --brown: #705448;
+      --rose: #b9827b;
+      --muted: #a18b7e;
+      --line: #e9d9ca;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Georgia, 'Times New Roman', serif;
-      background: #f5eee3;
-      color: #5d4638;
-      text-align: center;
-    }
-
-    .container {
-      width: min(90%, 650px);
-      margin: 35px auto;
-      padding: 28px 22px;
-      background: #fffaf2;
-      border: 1px solid #d9c4aa;
-      border-radius: 18px;
-      box-shadow: 0 8px 25px #6e50351a;
-    }
-
-    .small {
-      letter-spacing: 3px;
-      font-size: 12px;
-      color: #a17b5b;
-    }
-
-    h1 {
-      font-size: clamp(30px, 7vw, 46px);
-      margin: 15px 0;
-    }
-
-    p {
-      line-height: 1.9;
+      background: var(--cream);
+      color: var(--brown);
+      font-family: Georgia, "Times New Roman", serif;
+      overflow-x: hidden;
     }
 
     button {
-      border: none;
-      border-radius: 30px;
-      padding: 13px 23px;
-      margin: 8px 4px;
-      background: #795744;
-      color: white;
-      font-family: inherit;
-      font-size: 15px;
-      cursor: pointer;
+      font: inherit;
     }
 
-    button:hover {
-      background: #5d4030;
+    .page {
+      width: min(100% - 28px, 680px);
+      margin: 22px auto;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 15px 45px #74544212;
+      overflow: hidden;
+    }
+
+    .hero {
+      min-height: 570px;
+      padding: 60px 24px 45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      background:
+        radial-gradient(ellipse at 15% 20%, #ead9cc 0, transparent 30%),
+        radial-gradient(ellipse at 85% 75%, #efdcd7 0, transparent 35%),
+        var(--paper);
+    }
+
+    .eyebrow {
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 9vw, 70px);
+      line-height: 1.05;
+      font-weight: normal;
+      margin: 25px 0 16px;
+    }
+
+    .hero h1 em {
+      color: var(--rose);
+      font-weight: normal;
+    }
+
+    .hero p {
+      max-width: 330px;
+      line-height: 1.9;
+      font-size: 15px;
+      color: #8c7568;
+    }
+
+    .flower {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .hero-bottom {
+      margin-top: 35px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--muted);
+    }
+
+    .section {
+      padding: 45px 25px;
+      text-align: center;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font: 10px Arial, sans-serif;
+      color: var(--rose);
+    }
+
+    h2 {
+      font-size: clamp(27px, 6vw, 36px);
+      font-weight: normal;
+      margin: 12px 0;
+    }
+
+    .intro {
+      font-size: 14px;
+      line-height: 1.9;
+      color: #957e70;
+      max-width: 410px;
+      margin: 0 auto 28px;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      align-items: start;
+    }
+
+    .photo-card {
+      margin: 0;
+      padding: 8px 8px 15px;
+      background: #fff;
+      box-shadow: 0 5px 20px #74544212;
+      transform: rotate(-1deg);
+    }
+
+    .photo-card:nth-child(even) {
+      transform: rotate(1.5deg);
+      margin-top: 25px;
+    }
+
+    .photo-card img {
+      display: block;
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      background: #eee1d4;
+    }
+
+    .photo-card figcaption {
+      font-size: 12px;
+      color: #967b6a;
+      padding-top: 12px;
+      font-style: italic;
+    }
+
+    .photo-card:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      width: 75%;
+      justify-self: center;
+    }
+
+    .quote {
+      margin: 30px 0 0;
+      padding: 22px 12px;
+      border-top: 1px solid var(--line);
+      color: #9c7d75;
+      font-style: italic;
+      line-height: 1.9;
+      font-size: 16px;
+    }
+
+    .letter-section {
+      background: #f4e9df;
+    }
+
+    .letter-card {
+      max-width: 490px;
+      margin: 25px auto 0;
+      padding: 25px 20px;
+      background: #fffaf4;
+      border: 1px solid #e5d3c3;
+      box-shadow: 5px 6px 0 #d9c1b0;
+    }
+
+    .letter-top {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .letter-card p {
+      font-size: 14px;
+      line-height: 2;
+      color: #7d6556;
+    }
+
+    .letter-content {
+      text-align: left;
+      white-space: pre-line;
+    }
+
+    .signature {
+      text-align: right;
+      color: var(--rose);
+      font-style: italic;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 23px;
+      margin-top: 20px;
+      border: 1px solid var(--brown);
+      border-radius: 3px;
+      background: var(--brown);
+      color: white;
+      cursor: pointer;
+      font-size: 13px;
+      transition: 0.25s;
+    }
+
+    .btn:hover {
+      background: #8b6a59;
+      transform: translateY(-2px);
     }
 
     .hidden {
       display: none;
     }
 
-    .letter {
-      text-align: left;
-      white-space: pre-line;
-      line-height: 2;
-      margin-top: 25px;
-      padding: 20px;
-      background: #f8efe1;
-      border-radius: 12px;
+    .closing {
+      padding: 48px 20px 55px;
+      text-align: center;
+      background: var(--paper);
     }
 
-    .photos {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin: 25px 0;
+    .closing .heart {
+      font-size: 30px;
+      color: var(--rose);
+      animation: beat 1.8s infinite;
     }
 
-    .photos img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 4px solid white;
-      box-shadow: 0 3px 10px #6e50351a;
-    }
-
-    .photos img:last-child:nth-child(odd) {
-      grid-column: 1 / -1;
-      width: 75%;
-      justify-self: center;
-    }
-
-    #musicArea {
-      margin: 25px 0 10px;
-    }
-
-    #player {
-      width: 100%;
-      margin-top: 12px;
-      aspect-ratio: 16 / 9;
-      border: none;
-      border-radius: 12px;
+    .closing p {
+      line-height: 1.9;
+      font-size: 14px;
+      color: #987d6c;
     }
 
     footer {
-      font-size: 13px;
-      color: #9a7a63;
-      margin-top: 25px;
+      padding: 18px;
+      text-align: center;
+      background: #eadbd0;
+      color: #947667;
+      font: 10px Arial, sans-serif;
+      letter-spacing: 2px;
+    }
+
+    .sparkle {
+      position: absolute;
+      color: #c89c91;
+      opacity: 0.7;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .s1 { top: 16%; left: 12%; }
+    .s2 { top: 28%; right: 12%; animation-delay: 1s; }
+    .s3 { bottom: 18%; left: 17%; animation-delay: 2s; }
+    .s4 { bottom: 12%; right: 17%; animation-delay: 0.5s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-9px); }
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.12); }
+    }
+
+    @media (max-width: 430px) {
+      .hero { min-height: 510px; padding: 45px 18px; }
+      .section { padding: 38px 17px; }
+      .photo-grid { gap: 10px; }
+      .photo-card img { height: 170px; }
+      .photo-card { padding: 6px 6px 12px; }
+      .letter-card { padding: 22px 17px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+      }
     }
   </style>
 </head>
 
 <body>
-  <main class="container">
-    <p class="small">A LITTLE SOMETHING FOR YOU</p>
+  <main class="page">
 
-    <h1>Happy Birthday, Mass 🤎</h1>
+    <section class="hero">
+      <span class="sparkle s1">✧</span>
+      <span class="sparkle s2">♡</span>
+      <span class="sparkle s3">✧</span>
+      <span class="sparkle s4">♡</span>
 
-    <p>
-      Untuk seseorang yang selalu punya tempat
-      spesial di hati Adek.
-    </p>
+      <div class="flower">𓍢ִ໋🌷͙֒</div>
+      <div class="eyebrow">A little page made with love</div>
 
-    <div class="photos">
-      <img src="IMAGES/photo1.jpeg" alt="Kenangan kita 1">
-      <img src="IMAGES/photo2.jpeg" alt="Kenangan kita 2">
-      <img src="IMAGES/photo3.jpeg" alt="Kenangan kita 3">
-      <img src="IMAGES/photo4.jpeg" alt="Kenangan kita 4">
-      <img src="IMAGES/photo5.jpeg" alt="Kenangan kita 5">
-    </div>
+      <h1>Happy Birthday,<br><em>Mass ♡</em></h1>
 
-    <p>Ada surat kecil yang ingin Adek sampaikan.</p>
+      <p>
+        Hari ini adalah tentang Mass,
+        seseorang yang kehadirannya membuat
+        banyak hal sederhana terasa istimewa.
+      </p>
 
-    <button id="openLetter">
-      Buka surat untuk Mass 💌
-    </button>
-
-    <section id="letter" class="letter hidden">
-      Happy birthday, Mass sayang! 🤎
-
-      Selamat bertambah usia, yaa.
-      Semoga Mass selalu diberi kesehatan,
-      kebahagiaan, dan kemudahan dalam
-      setiap langkah yang Mass jalani.
-
-      Terima kasih sudah hadir dan menjadi
-      bagian berharga dalam hidup Adek.
-      Adek berharap kita bisa terus
-      menciptakan banyak kenangan indah
-      dan saling menemani dalam setiap
-      keadaan.
-
-      Semoga semua hal baik menemukan
-      jalan menuju Mass.
-
-      With all my love,
-      Adek 🤎
+      <div class="hero-bottom">MADE WITH LOVE, FROM ADEK</div>
     </section>
 
-    <section id="musicArea" class="hidden">
-      <p>🎵 Lagu yang ingin Adek putarkan untuk Mass</p>
+    <section class="section">
+      <div class="section-label">Our little memories</div>
+      <h2>Pieces of Us</h2>
 
-      <button id="playMusic">
-        ▶ Putar lagu kita
-      </button>
+      <p class="intro">
+        Beberapa potongan kecil dari cerita kita
+        yang ingin Adek simpan baik-baik.
+      </p>
 
-      <div id="videoBox" class="hidden">
-        
-<iframe
-  id="player"
-  title="Seluruh Nafas Ini - Last Child feat. Giselle"
-  width="100%"
-  height="315"
-  src="about:blank"
-  allow="autoplay; encrypted-media; picture-in-picture"
-  allowfullscreen>
-</iframe>
+      <div class="photo-grid">
+        <figure class="photo-card">
+          <img src="IMAGES/photo1.jpeg" alt="Kenangan pertama">
+          <figcaption>one of my favorites ♡</figcaption>
+        </figure>
 
+        <figure class="photo-card">
+          <img src="IMAGES/photo2.jpeg" alt="Kenangan kedua">
+          <figcaption>you & me</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img src="IMAGES/photo3.jpeg" alt="Kenangan ketiga">
+          <figcaption>a little happiness</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img src="IMAGES/photo4.jpeg" alt="Kenangan keempat">
+          <figcaption>my favorite person</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img src="IMAGES/photo5.jpeg" alt="Kenangan kelima">
+          <figcaption>more memories to come ♡</figcaption>
+        </figure>
       </div>
 
-      <p style="font-size:12px">
-        Seluruh Nafas Ini — Last Child ft. Giselle
+      <div class="quote">
+        "If I could keep one thing forever,<br>
+        I would keep the little moments with you."
+      </div>
+    </section>
+
+    <section class="section letter-section">
+      <div class="section-label">Something from my heart</div>
+      <h2>A Letter for Mass</h2>
+
+      <p class="intro">
+        Ada sesuatu yang ingin Adek sampaikan
+        di hari spesial Mass.
       </p>
+
+      <div class="letter-card">
+        <div class="letter-top">✉ ♡ ✉</div>
+        <div class="section-label">To my favorite person</div>
+
+        <button class="btn" id="openLetter">
+          Open your letter ♡
+        </button>
+
+        <div id="letterContent" class="letter-content hidden">
+          <p>Happy birthday, Mass sayang! 🤎</p>
+
+          <p>
+            Selamat bertambah usia, yaa.
+            Adek berharap di usia yang baru ini,
+            Mass selalu diberi kesehatan,
+            kebahagiaan, dan kekuatan untuk
+            melewati apa pun yang sedang Mass
+            perjuangkan.
+
+            Semoga hal-hal baik selalu menemukan
+            jalan menuju Mass. Semoga impian
+            Mass satu per satu bisa tercapai,
+            dan semoga Mass tidak lupa bahwa
+            Mass juga pantas mendapatkan
+            banyak hal indah dalam hidup.
+
+            Terima kasih sudah menjadi bagian
+            dari cerita Adek. Terima kasih untuk
+            setiap tawa, perhatian, dan momen
+            sederhana yang akhirnya menjadi
+            kenangan berharga.
+
+            Adek memang tidak bisa menjanjikan
+            bahwa setiap hari akan selalu mudah.
+            Namun, Adek berharap kita bisa terus
+            belajar memahami, saling mendukung,
+            dan menjaga apa yang kita punya.
+
+            Hari ini, Adek cuma ingin Mass tahu
+            bahwa kehadiran Mass berarti.
+            Semoga tahun ini membawa lebih
+            banyak alasan untuk tersenyum,
+            lebih banyak ketenangan, dan
+            kebahagiaan yang tulus.
+
+            Selamat ulang tahun, Mass.
+            Be happy, be healthy, and keep
+            being the wonderful person you are.
+          </p>
+
+          <p class="signature">
+            With all my love,<br>
+            Adek ♡
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="heart">♡</div>
+      <h2>For you, always.</h2>
+      <p>
+        Semoga hari ini terasa hangat,<br>
+        seperti hangatnya kehadiran Mass
+        dalam cerita Adek.
+      </p>
+      <div class="eyebrow">HAPPY BIRTHDAY, MY FAVORITE PERSON</div>
     </section>
 
     <footer>
-      Made with love, from Adek to Mass ♡
+      A LITTLE WEBSITE, A LOT OF LOVE ♡
     </footer>
+
   </main>
 
   <script>
     const openLetter = document.getElementById("openLetter");
-    const letter = document.getElementById("letter");
-    const musicArea = document.getElementById("musicArea");
-    const playMusic = document.getElementById("playMusic");
-    const videoBox = document.getElementById("videoBox");
-    const player = document.getElementById("player");
+    const letterContent = document.getElementById("letterContent");
 
     openLetter.addEventListener("click", function () {
-      letter.classList.remove("hidden");
-      musicArea.classList.remove("hidden");
-      openLetter.textContent = "Surat terbuka 🤎";
-      openLetter.disabled = true;
+      letterContent.classList.toggle("hidden");
+
+      if (letterContent.classList.contains("hidden")) {
+        openLetter.textContent = "Open your letter ♡";
+      } else {
+        openLetter.textContent = "Close your letter ♡";
+      }
     });
-
-    
-playMusic.addEventListener("click", function () {
-  player.src =
-    "https://www.youtube-nocookie.com/embed/Ske9Nwk-TmA?playsinline=1";
-
-  videoBox.classList.remove("hidden");
-  playMusic.textContent = "Lagu kita 🎶";
-});
-
   </script>
 </body>
 </html>
