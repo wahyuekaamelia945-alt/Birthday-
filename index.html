@@ -171,14 +171,17 @@
       </button>
 
       <div id="videoBox" class="hidden">
-        <iframe
-          id="player"
-          title="Seluruh Nafas Ini - Last Child feat. Giselle"
-          src="about:blank"
-          allow="autoplay; encrypted-media; picture-in-picture"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
+        
+<iframe
+  id="player"
+  title="Seluruh Nafas Ini - Last Child feat. Giselle"
+  width="100%"
+  height="315"
+  src="about:blank"
+  allow="autoplay; encrypted-media; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
       </div>
 
       <p style="font-size:12px">
@@ -206,13 +209,15 @@
       openLetter.disabled = true;
     });
 
-    playMusic.addEventListener("click", function () {
-      player.src =
-        "https://www.youtube.com/embed/Ske9Nwk-TmA?autoplay=1&playsinline=1";
+    
+playMusic.addEventListener("click", function () {
+  player.src =
+    "https://www.youtube-nocookie.com/embed/Ske9Nwk-TmA?playsinline=1";
 
-      videoBox.classList.remove("hidden");
-      playMusic.textContent = "Lagu sedang diputar 🎶";
-    });
+  videoBox.classList.remove("hidden");
+  playMusic.textContent = "Lagu kita 🎶";
+});
+
   </script>
 </body>
 </html>
