@@ -1,470 +1,498 @@
-
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f8f1e9">
-  <title>For My Favorite Person ♡</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Mass, With Love ♡</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500&family=Allura&display=swap');
 
-    :root {
-      --cream: #f8f1e9;
-      --paper: #fffaf4;
-      --brown: #705448;
-      --rose: #b9827b;
-      --muted: #a18b7e;
-      --line: #e9d9ca;
-    }
+:root {
+  --espresso: #49352a;
+  --coffee: #79563f;
+  --mocha: #a68165;
+  --latte: #d9c2a5;
+  --ivory: #fbf5e9;
+  --paper: #fffaf0;
+  --ink: #514034;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--brown);
-      font-family: Georgia, "Times New Roman", serif;
-      overflow-x: hidden;
-    }
+html { scroll-behavior: smooth; }
 
-    button {
-      font: inherit;
-    }
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  background:
+    radial-gradient(ellipse at 15% 15%, #fff8e9 0%, transparent 40%),
+    radial-gradient(ellipse at 90% 45%, #e4d0b6 0%, transparent 35%),
+    #e9d9c2;
+  overflow-x: hidden;
+}
 
-    .page {
-      width: min(100% - 28px, 680px);
-      margin: 22px auto;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      box-shadow: 0 15px 45px #74544212;
-      overflow: hidden;
-    }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: .3;
+  background-image: radial-gradient(#8d6a4e 0.7px, transparent .7px);
+  background-size: 7px 7px;
+}
 
-    .hero {
-      min-height: 570px;
-      padding: 60px 24px 45px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      background:
-        radial-gradient(ellipse at 15% 20%, #ead9cc 0, transparent 30%),
-        radial-gradient(ellipse at 85% 75%, #efdcd7 0, transparent 35%),
-        var(--paper);
-    }
+main {
+  width: min(92%, 780px);
+  margin: 36px auto;
+}
 
-    .eyebrow {
-      font-family: Arial, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 10px;
-      color: var(--muted);
-    }
+.card {
+  position: relative;
+  margin: 0 auto 24px;
+  padding: clamp(25px, 5vw, 52px);
+  background: var(--paper);
+  border: 1px solid #e1cdb1;
+  box-shadow: 0 14px 35px #5a3d2912;
+  isolation: isolate;
+}
 
-    .hero h1 {
-      font-size: clamp(42px, 9vw, 70px);
-      line-height: 1.05;
-      font-weight: normal;
-      margin: 25px 0 16px;
-    }
+.card::before {
+  content: "✦";
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #b99a72;
+  font-size: 17px;
+}
 
-    .hero h1 em {
-      color: var(--rose);
-      font-weight: normal;
-    }
+.card:first-child {
+  padding-top: 72px;
+  padding-bottom: 65px;
+  background: radial-gradient(ellipse at top, #fffdf6 0%, #f5e8d4 100%);
+  border: none;
+}
 
-    .hero p {
-      max-width: 330px;
-      line-height: 1.9;
-      font-size: 15px;
-      color: #8c7568;
-    }
+.card:first-child::before {
+  content: "☾  ✧  ♡";
+  top: 22px;
+  right: 25px;
+  letter-spacing: 7px;
+}
 
-    .flower {
-      font-size: 36px;
-      margin-bottom: 12px;
-    }
+.eyebrow {
+  margin-bottom: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #9c7958;
+}
 
-    .hero-bottom {
-      margin-top: 35px;
-      font-size: 11px;
-      letter-spacing: 2px;
-      color: var(--muted);
-    }
+h1, h2 {
+  font-weight: 500;
+  color: var(--coffee);
+}
 
-    .section {
-      padding: 45px 25px;
-      text-align: center;
-      border-top: 1px solid var(--line);
-    }
+h1 {
+  font-size: clamp(42px, 9vw, 76px);
+  line-height: .98;
+  margin: 20px 0;
+  letter-spacing: -2px;
+}
 
-    .section-label {
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font: 10px Arial, sans-serif;
-      color: var(--rose);
-    }
+h2 {
+  font-size: clamp(29px, 5vw, 42px);
+  margin: 12px 0;
+}
 
-    h2 {
-      font-size: clamp(27px, 6vw, 36px);
-      font-weight: normal;
-      margin: 12px 0;
-    }
+p {
+  font-size: 17px;
+  line-height: 1.8;
+}
 
-    .intro {
-      font-size: 14px;
-      line-height: 1.9;
-      color: #957e70;
-      max-width: 410px;
-      margin: 0 auto 28px;
-    }
+.subtitle {
+  font-family: 'Allura', cursive;
+  font-size: 28px;
+  color: #916c4e;
+}
 
-    .photo-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      align-items: start;
-    }
+.ornament {
+  color: #b08c62;
+  letter-spacing: 8px;
+  font-size: 18px;
+}
 
-    .photo-card {
-      margin: 0;
-      padding: 8px 8px 15px;
-      background: #fff;
-      box-shadow: 0 5px 20px #74544212;
-      transform: rotate(-1deg);
-    }
+button {
+  border: 1px solid #745139;
+  border-radius: 40px;
+  padding: 15px 28px;
+  background: #745139;
+  color: #fff7eb;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #5d402522;
+  transition: transform .3s, background .3s;
+}
 
-    .photo-card:nth-child(even) {
-      transform: rotate(1.5deg);
-      margin-top: 25px;
-    }
+button:hover {
+  background: #50392b;
+  transform: translateY(-3px);
+}
 
-    .photo-card img {
-      display: block;
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-      background: #eee1d4;
-    }
+.small {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #9c8065;
+}
 
-    .photo-card figcaption {
-      font-size: 12px;
-      color: #967b6a;
-      padding-top: 12px;
-      font-style: italic;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 16px;
+  margin: 32px auto;
+}
 
-    .photo-card:last-child:nth-child(odd) {
-      grid-column: 1 / -1;
-      width: 75%;
-      justify-self: center;
-    }
+.film {
+  position: relative;
+  margin: 0;
+  padding: 9px 9px 17px;
+  background: #fffdf7;
+  border: 1px solid #e9ddcb;
+  box-shadow: 0 7px 15px #5a402015;
+  transform: rotate(-2deg);
+  transition: transform .3s;
+}
 
-    .quote {
-      margin: 30px 0 0;
-      padding: 22px 12px;
-      border-top: 1px solid var(--line);
-      color: #9c7d75;
-      font-style: italic;
-      line-height: 1.9;
-      font-size: 16px;
-    }
+.film:nth-child(2),
+.film:nth-child(4) {
+  transform: rotate(2deg);
+}
 
-    .letter-section {
-      background: #f4e9df;
-    }
+.film:hover {
+  transform: rotate(0deg) translateY(-5px);
+}
 
-    .letter-card {
-      max-width: 490px;
-      margin: 25px auto 0;
-      padding: 25px 20px;
-      background: #fffaf4;
-      border: 1px solid #e5d3c3;
-      box-shadow: 5px 6px 0 #d9c1b0;
-    }
+.film::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 35%;
+  width: 60px;
+  height: 16px;
+  background: #d9c6a5aa;
+  transform: rotate(-5deg);
+  z-index: 2;
+}
 
-    .letter-top {
-      font-size: 22px;
-      margin-bottom: 15px;
-    }
+.film img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background: #e6d6c2;
+  filter: sepia(.12) saturate(.85);
+}
 
-    .letter-card p {
-      font-size: 14px;
-      line-height: 2;
-      color: #7d6556;
-    }
+.film figcaption {
+  padding-top: 10px;
+  font-family: 'Allura', cursive;
+  font-size: 21px;
+  color: #8d6b4d;
+}
 
-    .letter-content {
-      text-align: left;
-      white-space: pre-line;
-    }
+.film:last-child {
+  grid-column: 1 / -1;
+  width: 68%;
+  justify-self: center;
+}
 
-    .signature {
-      text-align: right;
-      color: var(--rose);
-      font-style: italic;
-      margin-top: 20px;
-    }
+.wish {
+  padding: 16px 5px;
+  margin-top: 22px;
+  border-top: 1px solid #dfcbb0;
+  border-bottom: 1px solid #dfcbb0;
+  font-family: 'Allura', cursive;
+  font-size: 27px;
+  color: #8d694b;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 13px 23px;
-      margin-top: 20px;
-      border: 1px solid var(--brown);
-      border-radius: 3px;
-      background: var(--brown);
-      color: white;
-      cursor: pointer;
-      font-size: 13px;
-      transition: 0.25s;
-    }
+#letter {
+  display: none;
+  text-align: left;
+  background: repeating-linear-gradient(
+    to bottom,
+    #fffaf0 0px,
+    #fffaf0 31px,
+    #eadcc9 32px
+  );
+  border: 1px solid #dfc9ac;
+  box-shadow: 0 12px 30px #49352a12;
+  animation: letterOpen .8s ease both;
+}
 
-    .btn:hover {
-      background: #8b6a59;
-      transform: translateY(-2px);
-    }
+#letter h2,
+#letter .letter-heading {
+  text-align: center;
+}
 
-    .hidden {
-      display: none;
-    }
+#letter p {
+  font-size: 17px;
+  line-height: 1.9;
+  margin: 18px 0;
+}
 
-    .closing {
-      padding: 48px 20px 55px;
-      text-align: center;
-      background: var(--paper);
-    }
+.signature {
+  margin-top: 30px;
+  text-align: right;
+  font-family: 'Allura', cursive;
+  font-size: 25px;
+  line-height: 1.5;
+}
 
-    .closing .heart {
-      font-size: 30px;
-      color: var(--rose);
-      animation: beat 1.8s infinite;
-    }
+footer {
+  padding: 20px 0 35px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #8d6b4e;
+}
 
-    .closing p {
-      line-height: 1.9;
-      font-size: 14px;
-      color: #987d6c;
-    }
+.floaty {
+  position: fixed;
+  bottom: -35px;
+  pointer-events: none;
+  z-index: 10;
+  animation: floatUp 9s linear forwards;
+}
 
-    footer {
-      padding: 18px;
-      text-align: center;
-      background: #eadbd0;
-      color: #947667;
-      font: 10px Arial, sans-serif;
-      letter-spacing: 2px;
-    }
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 0;
+  }
+  15% { opacity: .75; }
+  100% {
+    transform: translateY(-110vh) rotate(35deg);
+    opacity: 0;
+  }
+}
 
-    .sparkle {
-      position: absolute;
-      color: #c89c91;
-      opacity: 0.7;
-      animation: float 4s ease-in-out infinite;
-    }
+@keyframes letterOpen {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    .s1 { top: 16%; left: 12%; }
-    .s2 { top: 28%; right: 12%; animation-delay: 1s; }
-    .s3 { bottom: 18%; left: 17%; animation-delay: 2s; }
-    .s4 { bottom: 12%; right: 17%; animation-delay: 0.5s; }
+@media (max-width: 480px) {
+  main {
+    width: 94%;
+    margin: 15px auto;
+  }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-9px); }
-    }
+  .card {
+    padding: 26px 17px;
+    margin-bottom: 17px;
+  }
 
-    @keyframes beat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.12); }
-    }
+  .card:first-child {
+    padding-top: 65px;
+    padding-bottom: 45px;
+  }
 
-    @media (max-width: 430px) {
-      .hero { min-height: 510px; padding: 45px 18px; }
-      .section { padding: 38px 17px; }
-      .photo-grid { gap: 10px; }
-      .photo-card img { height: 170px; }
-      .photo-card { padding: 6px 6px 12px; }
-      .letter-card { padding: 22px 17px; }
-    }
+  .gallery {
+    gap: 18px 10px;
+  }
 
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation: none !important;
-        scroll-behavior: auto !important;
-      }
-    }
-  </style>
+  .film {
+    padding: 6px 6px 13px;
+  }
+
+  #letter {
+    padding: 25px 17px;
+  }
+
+  #letter p {
+    font-size: 16px;
+  }
+}
+</style>
 </head>
 
 <body>
-  <main class="page">
+<main>
 
-    <section class="hero">
-      <span class="sparkle s1">✧</span>
-      <span class="sparkle s2">♡</span>
-      <span class="sparkle s3">✧</span>
-      <span class="sparkle s4">♡</span>
+  <section class="card">
+    <div class="ornament">✦ · ✧ · ✦</div>
+    <p class="eyebrow">A little something for you</p>
+    <h1>Happy Birthday,<br>Mass ♡</h1>
+    <p class="subtitle">Untuk Mass kesayangan Adek 🤎</p>
+    <p>
+      Ada beberapa kenangan, doa, dan kata-kata
+      kecil yang ingin Adek simpan di halaman ini.
+    </p>
+    <button onclick="bukaSurat()">Buka surat dari Adek ♡</button>
+    <p class="small">Dibuat dengan tulus, khusus untuk Mass.</p>
+  </section>
 
-      <div class="flower">𓍢ִ໋🌷͙֒</div>
-      <div class="eyebrow">A little page made with love</div>
+  <section class="card">
+    <p class="eyebrow">Chapter One · Memories</p>
+    <h2>Our Little Memories</h2>
+    <p>Beberapa potongan cerita yang berarti bagi Adek.</p>
 
-      <h1>Happy Birthday,<br><em>Mass ♡</em></h1>
+    <div class="gallery">
+      <figure class="film">
+        <img src="IMAGES/photo1.jpeg" alt="Kenangan pertama">
+        <figcaption>MEMORY NO. 01</figcaption>
+      </figure>
+      <figure class="film">
+        <img src="IMAGES/photo2.jpeg" alt="Kenangan kedua">
+        <figcaption>MEMORY NO. 02</figcaption>
+      </figure>
+      <figure class="film">
+        <img src="IMAGES/photo3.jpeg" alt="Kenangan ketiga">
+        <figcaption>MEMORY NO. 03</figcaption>
+      </figure>
+      <figure class="film">
+        <img src="IMAGES/photo4.jpeg" alt="Kenangan keempat">
+        <figcaption>MEMORY NO. 04</figcaption>
+      </figure>
+      <figure class="film">
+        <img src="IMAGES/photo5.jpeg" alt="Kenangan kelima">
+        <figcaption>ONE MORE MEMORY ♡</figcaption>
+      </figure>
+    </div>
 
-      <p>
-        Hari ini adalah tentang Mass,
-        seseorang yang kehadirannya membuat
-        banyak hal sederhana terasa istimewa.
-      </p>
+    <p class="subtitle">
+      Some moments become memories we keep close to our hearts.
+    </p>
+  </section>
 
-      <div class="hero-bottom">MADE WITH LOVE, FROM ADEK</div>
-    </section>
+  <section class="card">
+    <div class="ornament">☾ ✦ ☽</div>
+    <p class="eyebrow">Chapter Two · Birthday Wishes</p>
+    <h2>A Wish for Mass</h2>
+    <p>
+      Semoga di umur yang baru ini, Mass selalu sehat,
+      bahagia, dimudahkan rezekinya, dilancarkan semua
+      urusannya, dan diberi kekuatan untuk melewati
+      apa pun yang sedang Mass hadapi.
+    </p>
+    <p>
+      Semoga semua keinginan baik Mass bisa tercapai
+      satu per satu, dan semoga hal-hal baik selalu
+      menemukan Mass, ke mana pun Mass melangkah.
+    </p>
+    <div class="wish">May life be gentle with you, Mass. ♡</div>
+  </section>
 
-    <section class="section">
-      <div class="section-label">Our little memories</div>
-      <h2>Pieces of Us</h2>
+  <section class="card" id="letter">
+    <div class="letter-heading">
+      <div class="ornament">✧ ── ♡ ── ✧</div>
+      <p class="eyebrow">A letter from Adek</p>
+      <h2>Untuk Mass, dengan Sayang</h2>
+    </div>
 
-      <p class="intro">
-        Beberapa potongan kecil dari cerita kita
-        yang ingin Adek simpan baik-baik.
-      </p>
+    <p><strong>Happy Birthday, Mass! ♡</strong></p>
+    <p>Selamat ulang tahun, Mass kesayangan Adek. 🤍</p>
 
-      <div class="photo-grid">
-        <figure class="photo-card">
-          <img src="IMAGES/photo1.jpeg" alt="Kenangan pertama">
-          <figcaption>one of my favorites ♡</figcaption>
-        </figure>
+    <p>
+      Semoga di umur yang baru ini, Mass selalu sehat,
+      bahagia, dimudahkan rezekinya, dilancarkan semua
+      urusannya, dan diberi kekuatan untuk melewati apa
+      pun yang sedang Mass hadapi.
+    </p>
 
-        <figure class="photo-card">
-          <img src="IMAGES/photo2.jpeg" alt="Kenangan kedua">
-          <figcaption>you & me</figcaption>
-        </figure>
+    <p>
+      Adek berharap semoga semua keinginan baik Mass bisa
+      tercapai satu per satu. Kalau belum sekarang, semoga
+      nanti ada waktu terbaik yang datang untuk Mass.
+    </p>
 
-        <figure class="photo-card">
-          <img src="IMAGES/photo3.jpeg" alt="Kenangan ketiga">
-          <figcaption>a little happiness</figcaption>
-        </figure>
+    <p>
+      Jangan terlalu keras sama diri sendiri, ya, Mass.
+      Kalau capek, istirahat dulu. Kalau ada yang terasa
+      berat, semoga Mass selalu menemukan alasan untuk
+      bertahan dan kembali tersenyum.
+    </p>
 
-        <figure class="photo-card">
-          <img src="IMAGES/photo4.jpeg" alt="Kenangan keempat">
-          <figcaption>my favorite person</figcaption>
-        </figure>
+    <p>
+      Dan kalau boleh Adek berharap satu hal di hari ulang
+      tahun Mass ini, Adek berharap Mass mau memikirkan
+      sekali lagi keputusan untuk meninggalkan Adek. Adek
+      tahu mungkin ada hal-hal yang membuat Mass lelah,
+      kecewa, atau merasa bahwa kita tidak bisa melanjutkan
+      semuanya seperti dulu. Adek nggak ingin mengabaikan
+      apa yang Mass rasakan. Adek cuma berharap, kalau masih
+      ada sedikit ruang di hati Mass untuk kita, semoga kita
+      bisa mencoba berbicara sekali lagi, saling mendengarkan,
+      dan memahami satu sama lain sebelum benar-benar memilih
+      jalan masing-masing.
+    </p>
 
-        <figure class="photo-card">
-          <img src="IMAGES/photo5.jpeg" alt="Kenangan kelima">
-          <figcaption>more memories to come ♡</figcaption>
-        </figure>
-      </div>
+    <p>
+      Adek nggak bisa menjanjikan bahwa semuanya akan selalu
+      mudah, tapi Adek masih punya harapan untuk kita. Adek
+      masih ingin memperbaiki apa yang bisa diperbaiki,
+      belajar dari apa yang sudah terjadi, dan berusaha
+      menjadi lebih baik. Namun, Adek juga ingin Mass bahagia
+      dan merasa tenang dengan keputusan yang Mass ambil.
+    </p>
 
-      <div class="quote">
-        "If I could keep one thing forever,<br>
-        I would keep the little moments with you."
-      </div>
-    </section>
+    <p>
+      Terima kasih sudah menjadi Mass yang Adek kenal, sudah
+      hadir dalam hidup Adek, dan sudah memberikan banyak
+      kenangan yang berarti. Semoga hal-hal baik selalu
+      menyertai Mass, ke mana pun Mass melangkah.
+    </p>
 
-    <section class="section letter-section">
-      <div class="section-label">Something from my heart</div>
-      <h2>A Letter for Mass</h2>
+    <p><strong>
+      Panjang umur, sehat selalu, dan bahagia terus, ya, Mass.
+    </strong></p>
 
-      <p class="intro">
-        Ada sesuatu yang ingin Adek sampaikan
-        di hari spesial Mass.
-      </p>
+    <div class="signature">
+      Dengan segala doa baik dan rasa sayang yang masih Adek simpan,<br><br>
+      With love,<br>
+      <strong>Adek ♡</strong>
+    </div>
+  </section>
 
-      <div class="letter-card">
-        <div class="letter-top">✉ ♡ ✉</div>
-        <div class="section-label">To my favorite person</div>
+  <footer>
+    MADE WITH LOVE · FOR MASS ♡
+  </footer>
 
-        <button class="btn" id="openLetter">
-          Open your letter ♡
-        </button>
+</main>
 
-        <div id="letterContent" class="letter-content hidden">
-          <p>Happy birthday, Mass sayang! 🤎</p>
+<script>
+function bukaSurat() {
+  const surat = document.getElementById("letter");
+  surat.style.display = "block";
+  surat.scrollIntoView({ behavior: "smooth", block: "start" });
+}
 
-          <p>
-            Selamat bertambah usia, yaa.
-            Adek berharap di usia yang baru ini,
-            Mass selalu diberi kesehatan,
-            kebahagiaan, dan kekuatan untuk
-            melewati apa pun yang sedang Mass
-            perjuangkan.
+function buatHiasan() {
+  const item = document.createElement("span");
+  item.className = "floaty";
+  item.textContent = Math.random() > 0.55 ? "♡" : "✦";
+  item.style.left = Math.random() * 100 + "vw";
+  item.style.fontSize = (12 + Math.random() * 14) + "px";
+  item.style.color = Math.random() > 0.5 ? "#b79a70" : "#a17c61";
+  item.style.animationDuration = (7 + Math.random() * 5) + "s";
+  document.body.appendChild(item);
+  setTimeout(() => item.remove(), 12000);
+}
 
-            Semoga hal-hal baik selalu menemukan
-            jalan menuju Mass. Semoga impian
-            Mass satu per satu bisa tercapai,
-            dan semoga Mass tidak lupa bahwa
-            Mass juga pantas mendapatkan
-            banyak hal indah dalam hidup.
-
-            Terima kasih sudah menjadi bagian
-            dari cerita Adek. Terima kasih untuk
-            setiap tawa, perhatian, dan momen
-            sederhana yang akhirnya menjadi
-            kenangan berharga.
-
-            Adek memang tidak bisa menjanjikan
-            bahwa setiap hari akan selalu mudah.
-            Namun, Adek berharap kita bisa terus
-            belajar memahami, saling mendukung,
-            dan menjaga apa yang kita punya.
-
-            Hari ini, Adek cuma ingin Mass tahu
-            bahwa kehadiran Mass berarti.
-            Semoga tahun ini membawa lebih
-            banyak alasan untuk tersenyum,
-            lebih banyak ketenangan, dan
-            kebahagiaan yang tulus.
-
-            Selamat ulang tahun, Mass.
-            Be happy, be healthy, and keep
-            being the wonderful person you are.
-          </p>
-
-          <p class="signature">
-            With all my love,<br>
-            Adek ♡
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="closing">
-      <div class="heart">♡</div>
-      <h2>For you, always.</h2>
-      <p>
-        Semoga hari ini terasa hangat,<br>
-        seperti hangatnya kehadiran Mass
-        dalam cerita Adek.
-      </p>
-      <div class="eyebrow">HAPPY BIRTHDAY, MY FAVORITE PERSON</div>
-    </section>
-
-    <footer>
-      A LITTLE WEBSITE, A LOT OF LOVE ♡
-    </footer>
-
-  </main>
-
-  <script>
-    const openLetter = document.getElementById("openLetter");
-    const letterContent = document.getElementById("letterContent");
-
-    openLetter.addEventListener("click", function () {
-      letterContent.classList.toggle("hidden");
-
-      if (letterContent.classList.contains("hidden")) {
-        openLetter.textContent = "Open your letter ♡";
-      } else {
-        openLetter.textContent = "Close your letter ♡";
-      }
-    });
-  </script>
+setInterval(buatHiasan, 1000);
+</script>
 </body>
 </html>
+```
