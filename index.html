@@ -1,10 +1,11 @@
-```html
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Mass, With Love ♡</title>
+
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500&family=Allura&display=swap');
@@ -19,9 +20,13 @@
   --ink: #514034;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -72,7 +77,8 @@ main {
 .card:first-child {
   padding-top: 72px;
   padding-bottom: 65px;
-  background: radial-gradient(ellipse at top, #fffdf6 0%, #f5e8d4 100%);
+  background:
+    radial-gradient(ellipse at top, #fffdf6 0%, #f5e8d4 100%);
   border: none;
 }
 
@@ -224,12 +230,13 @@ button:hover {
 #letter {
   display: none;
   text-align: left;
-  background: repeating-linear-gradient(
-    to bottom,
-    #fffaf0 0px,
-    #fffaf0 31px,
-    #eadcc9 32px
-  );
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #fffaf0 0px,
+      #fffaf0 31px,
+      #eadcc9 32px
+    );
   border: 1px solid #dfc9ac;
   box-shadow: 0 12px 30px #49352a12;
   animation: letterOpen .8s ease both;
@@ -252,6 +259,21 @@ button:hover {
   font-family: 'Allura', cursive;
   font-size: 25px;
   line-height: 1.5;
+}
+
+.music-box {
+  margin-top: 24px;
+  padding: 24px 18px;
+  background: #f2e5d2;
+  border: 1px dashed #b99b78;
+  border-radius: 4px;
+}
+
+audio {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  accent-color: #79563f;
 }
 
 footer {
@@ -326,6 +348,7 @@ footer {
   }
 }
 </style>
+
 </head>
 
 <body>
@@ -403,6 +426,7 @@ footer {
     </div>
 
     <p><strong>Happy Birthday, Mass! ♡</strong></p>
+
     <p>Selamat ulang tahun, Mass kesayangan Adek. 🤍</p>
 
     <p>
@@ -466,6 +490,26 @@ footer {
     </div>
   </section>
 
+  <section class="card">
+    <p class="eyebrow">Chapter Three · A Song for You</p>
+    <h2>Seluruh Nafas Ini ♡</h2>
+    <p>Last Child feat. Gisel</p>
+
+    <div class="music-box">
+      <p class="small">
+        Sebuah lagu untuk menemani kenangan dan doa Adek.
+      </p>
+      <audio controls loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Browser ini tidak mendukung pemutar audio.
+      </audio>
+      <p class="small">
+        Musik akan berfungsi setelah file music.mp3
+        ditambahkan ke folder website.
+      </p>
+    </div>
+  </section>
+
   <footer>
     MADE WITH LOVE · FOR MASS ♡
   </footer>
@@ -495,4 +539,3 @@ setInterval(buatHiasan, 1000);
 </script>
 </body>
 </html>
-```
