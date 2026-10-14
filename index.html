@@ -2,541 +2,407 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Mass, With Love ♡</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Mass ♡</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500&family=Allura&display=swap');
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-:root {
-  --espresso: #49352a;
-  --coffee: #79563f;
-  --mocha: #a68165;
-  --latte: #d9c2a5;
-  --ivory: #fbf5e9;
-  --paper: #fffaf0;
-  --ink: #514034;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #fff7f7;
+      color: #624b52;
+      line-height: 1.8;
+      padding: 24px 16px;
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    .container {
+      max-width: 720px;
+      margin: auto;
+    }
 
-body {
-  margin: 0;
-  color: var(--ink);
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  background:
-    radial-gradient(ellipse at 15% 15%, #fff8e9 0%, transparent 40%),
-    radial-gradient(ellipse at 90% 45%, #e4d0b6 0%, transparent 35%),
-    #e9d9c2;
-  overflow-x: hidden;
-}
+    .card {
+      background: #ffffff;
+      border: 1px solid #f4dfe4;
+      border-radius: 22px;
+      padding: 30px 24px;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 28px rgba(133, 78, 94, 0.06);
+    }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: .3;
-  background-image: radial-gradient(#8d6a4e 0.7px, transparent .7px);
-  background-size: 7px 7px;
-}
+    .hero {
+      text-align: center;
+      padding: 48px 24px;
+      background: linear-gradient(145deg, #fff, #fff0f3);
+    }
 
-main {
-  width: min(92%, 780px);
-  margin: 36px auto;
-}
+    .heart {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
 
-.card {
-  position: relative;
-  margin: 0 auto 24px;
-  padding: clamp(25px, 5vw, 52px);
-  background: var(--paper);
-  border: 1px solid #e1cdb1;
-  box-shadow: 0 14px 35px #5a3d2912;
-  isolation: isolate;
-}
+    .eyebrow {
+      color: #bd8192;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
 
-.card::before {
-  content: "✦";
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  color: #b99a72;
-  font-size: 17px;
-}
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: #92596c;
+      line-height: 1.4;
+    }
 
-.card:first-child {
-  padding-top: 72px;
-  padding-bottom: 65px;
-  background:
-    radial-gradient(ellipse at top, #fffdf6 0%, #f5e8d4 100%);
-  border: none;
-}
+    h1 {
+      font-size: clamp(32px, 8vw, 48px);
+      margin-bottom: 16px;
+    }
 
-.card:first-child::before {
-  content: "☾  ✧  ♡";
-  top: 22px;
-  right: 25px;
-  letter-spacing: 7px;
-}
+    h2 {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
 
-.eyebrow {
-  margin-bottom: 12px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 9px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #9c7958;
-}
+    p {
+      margin-bottom: 12px;
+    }
 
-h1, h2 {
-  font-weight: 500;
-  color: var(--coffee);
-}
+    .small {
+      font-size: 13px;
+      color: #a1848c;
+    }
 
-h1 {
-  font-size: clamp(42px, 9vw, 76px);
-  line-height: .98;
-  margin: 20px 0;
-  letter-spacing: -2px;
-}
+    .center {
+      text-align: center;
+    }
 
-h2 {
-  font-size: clamp(29px, 5vw, 42px);
-  margin: 12px 0;
-}
+    .music-box {
+      margin-top: 20px;
+      padding: 22px 16px;
+      border-radius: 16px;
+      background: #fff4f6;
+      text-align: center;
+    }
 
-p {
-  font-size: 17px;
-  line-height: 1.8;
-}
+    audio {
+      display: block;
+      width: 100%;
+      margin: 18px auto 10px;
+    }
 
-.subtitle {
-  font-family: 'Allura', cursive;
-  font-size: 28px;
-  color: #916c4e;
-}
+    .button {
+      display: inline-block;
+      border: none;
+      border-radius: 30px;
+      background: #b87589;
+      color: white;
+      padding: 12px 24px;
+      font-family: inherit;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.2s;
+    }
 
-.ornament {
-  color: #b08c62;
-  letter-spacing: 8px;
-  font-size: 18px;
-}
+    .button:hover {
+      background: #995b70;
+      transform: translateY(-2px);
+    }
 
-button {
-  border: 1px solid #745139;
-  border-radius: 40px;
-  padding: 15px 28px;
-  background: #745139;
-  color: #fff7eb;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 0 5px 15px #5d402522;
-  transition: transform .3s, background .3s;
-}
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
 
-button:hover {
-  background: #50392b;
-  transform: translateY(-3px);
-}
+    .photo {
+      min-height: 160px;
+      border-radius: 15px;
+      background: #fff0f3;
+      border: 1px dashed #dfb7c2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 12px;
+      overflow: hidden;
+    }
 
-.small {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
-  color: #9c8065;
-}
+    .photo img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px 16px;
-  margin: 32px auto;
-}
+    .letter {
+      display: none;
+      margin-top: 22px;
+      padding: 22px;
+      border-radius: 16px;
+      background: #fff7f8;
+      white-space: pre-line;
+    }
 
-.film {
-  position: relative;
-  margin: 0;
-  padding: 9px 9px 17px;
-  background: #fffdf7;
-  border: 1px solid #e9ddcb;
-  box-shadow: 0 7px 15px #5a402015;
-  transform: rotate(-2deg);
-  transition: transform .3s;
-}
+    .letter.show {
+      display: block;
+      animation: appear 0.8s ease;
+    }
 
-.film:nth-child(2),
-.film:nth-child(4) {
-  transform: rotate(2deg);
-}
+    .divider {
+      width: 65px;
+      height: 2px;
+      background: #e8bac7;
+      margin: 20px auto;
+    }
 
-.film:hover {
-  transform: rotate(0deg) translateY(-5px);
-}
+    footer {
+      text-align: center;
+      padding: 18px 10px 30px;
+      color: #b18b96;
+      font-size: 12px;
+    }
 
-.film::before {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: 35%;
-  width: 60px;
-  height: 16px;
-  background: #d9c6a5aa;
-  transform: rotate(-5deg);
-  z-index: 2;
-}
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-.film img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  background: #e6d6c2;
-  filter: sepia(.12) saturate(.85);
-}
+    @media (max-width: 480px) {
+      .card {
+        padding: 25px 18px;
+      }
 
-.film figcaption {
-  padding-top: 10px;
-  font-family: 'Allura', cursive;
-  font-size: 21px;
-  color: #8d6b4d;
-}
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
 
-.film:last-child {
-  grid-column: 1 / -1;
-  width: 68%;
-  justify-self: center;
-}
-
-.wish {
-  padding: 16px 5px;
-  margin-top: 22px;
-  border-top: 1px solid #dfcbb0;
-  border-bottom: 1px solid #dfcbb0;
-  font-family: 'Allura', cursive;
-  font-size: 27px;
-  color: #8d694b;
-}
-
-#letter {
-  display: none;
-  text-align: left;
-  background:
-    repeating-linear-gradient(
-      to bottom,
-      #fffaf0 0px,
-      #fffaf0 31px,
-      #eadcc9 32px
-    );
-  border: 1px solid #dfc9ac;
-  box-shadow: 0 12px 30px #49352a12;
-  animation: letterOpen .8s ease both;
-}
-
-#letter h2,
-#letter .letter-heading {
-  text-align: center;
-}
-
-#letter p {
-  font-size: 17px;
-  line-height: 1.9;
-  margin: 18px 0;
-}
-
-.signature {
-  margin-top: 30px;
-  text-align: right;
-  font-family: 'Allura', cursive;
-  font-size: 25px;
-  line-height: 1.5;
-}
-
-.music-box {
-  margin-top: 24px;
-  padding: 24px 18px;
-  background: #f2e5d2;
-  border: 1px dashed #b99b78;
-  border-radius: 4px;
-}
-
-audio {
-  display: block;
-  width: 100%;
-  margin-top: 16px;
-  accent-color: #79563f;
-}
-
-footer {
-  padding: 20px 0 35px;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: #8d6b4e;
-}
-
-.floaty {
-  position: fixed;
-  bottom: -35px;
-  pointer-events: none;
-  z-index: 10;
-  animation: floatUp 9s linear forwards;
-}
-
-@keyframes floatUp {
-  0% {
-    transform: translateY(0) rotate(0);
-    opacity: 0;
-  }
-  15% { opacity: .75; }
-  100% {
-    transform: translateY(-110vh) rotate(35deg);
-    opacity: 0;
-  }
-}
-
-@keyframes letterOpen {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 480px) {
-  main {
-    width: 94%;
-    margin: 15px auto;
-  }
-
-  .card {
-    padding: 26px 17px;
-    margin-bottom: 17px;
-  }
-
-  .card:first-child {
-    padding-top: 65px;
-    padding-bottom: 45px;
-  }
-
-  .gallery {
-    gap: 18px 10px;
-  }
-
-  .film {
-    padding: 6px 6px 13px;
-  }
-
-  #letter {
-    padding: 25px 17px;
-  }
-
-  #letter p {
-    font-size: 16px;
-  }
-}
-</style>
-
+      .photo img {
+        height: 150px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<main>
+  <main class="container">
 
-  <section class="card">
-    <div class="ornament">✦ · ✧ · ✦</div>
-    <p class="eyebrow">A little something for you</p>
-    <h1>Happy Birthday,<br>Mass ♡</h1>
-    <p class="subtitle">Untuk Mass kesayangan Adek 🤎</p>
-    <p>
-      Ada beberapa kenangan, doa, dan kata-kata
-      kecil yang ingin Adek simpan di halaman ini.
-    </p>
-    <button onclick="bukaSurat()">Buka surat dari Adek ♡</button>
-    <p class="small">Dibuat dengan tulus, khusus untuk Mass.</p>
-  </section>
+    <!-- BAGIAN 1: UCAPAN ULANG TAHUN -->
+    <section class="card hero">
+      <div class="heart">♡</div>
+      <p class="eyebrow">A little surprise for you</p>
 
-  <section class="card">
-    <p class="eyebrow">Chapter One · Memories</p>
-    <h2>Our Little Memories</h2>
-    <p>Beberapa potongan cerita yang berarti bagi Adek.</p>
+      <h1>Happy Birthday,<br>Mass ♡</h1>
 
-    <div class="gallery">
-      <figure class="film">
-        <img src="IMAGES/photo1.jpeg" alt="Kenangan pertama">
-        <figcaption>JTP 2-02-2026</figcaption>
-      </figure>
-      <figure class="film">
-        <img src="IMAGES/photo2.jpeg" alt="Kenangan kedua">
-        <figcaption>BROMO 2-05-2026</figcaption>
-      </figure>
-      <figure class="film">
-        <img src="IMAGES/photo3.jpeg" alt="Kenangan ketiga">
-        <figcaption>WATU LETER 11-04-2026</figcaption>
-      </figure>
-      <figure class="film">
-        <img src="IMAGES/photo4.jpeg" alt="Kenangan keempat">
-        <figcaption>WATU LETER 11-04-2026</figcaption>
-      </figure>
-      <figure class="film">
-        <img src="IMAGES/photo5.jpeg" alt="Kenangan kelima">
-        <figcaption>24-03-2026♡</figcaption>
-      </figure>
-    </div>
-
-    <p class="subtitle">
-      Some moments become memories we keep close to our hearts.
-    </p>
-  </section>
-
-  <section class="card">
-    <div class="ornament">☾ ✦ ☽</div>
-    <p class="eyebrow">Chapter Two · Birthday Wishes</p>
-    <h2>A Wish for Mass</h2>
-    <p>
-      Semoga di umur yang baru ini, Mass selalu sehat,
-      bahagia, dimudahkan rezekinya, dilancarkan semua
-      urusannya, dan diberi kekuatan untuk melewati
-      apa pun yang sedang Mass hadapi.
-    </p>
-    <p>
-      Semoga semua keinginan baik Mass bisa tercapai
-      satu per satu, dan semoga hal-hal baik selalu
-      menemukan Mass, ke mana pun Mass melangkah.
-    </p>
-    <div class="wish">May life be gentle with you, Mass. ♡</div>
-  </section>
-
-  <section class="card" id="letter">
-    <div class="letter-heading">
-      <div class="ornament">✧ ── ♡ ── ✧</div>
-      <p class="eyebrow">A letter from Adek</p>
-      <h2>Untuk Mass, dengan Sayang</h2>
-    </div>
-
-    <p><strong>Happy Birthday, Mass! ♡</strong></p>
-
-    <p>Selamat ulang tahun, Mass kesayangan Adek. 🤍</p>
-
-    <p>
-      Semoga di umur yang baru ini, Mass selalu sehat,
-      bahagia, dimudahkan rezekinya, dilancarkan semua
-      urusannya, dan diberi kekuatan untuk melewati apa
-      pun yang sedang Mass hadapi.
-    </p>
-
-    <p>
-      Adek berharap semoga semua keinginan baik Mass bisa
-      tercapai satu per satu. Kalau belum sekarang, semoga
-      nanti ada waktu terbaik yang datang untuk Mass.
-    </p>
-
-    <p>
-      Jangan terlalu keras sama diri sendiri, ya, Mass.
-      Kalau capek, istirahat dulu. Kalau ada yang terasa
-      berat, semoga Mass selalu menemukan alasan untuk
-      bertahan dan kembali tersenyum.
-    </p>
-
-    <p>
-      Dan kalau boleh Adek berharap satu hal di hari ulang
-      tahun Mass ini, Adek berharap Mass mau memikirkan
-      sekali lagi keputusan untuk meninggalkan Adek. Adek
-      tahu mungkin ada hal-hal yang membuat Mass lelah,
-      atau kecewa. Adek cuma berharap, kalau masih
-      ada sedikit ruang di hati Mass untuk kita, semoga kita
-      bisa mencoba berbicara sekali lagi, saling mendengarkan,
-      dan memahami satu sama lain sebelum benar-benar memilih
-      jalan masing-masing.
-    </p>
-
-    <p>
-      Adek masih ingin memperbaiki apa yang bisa diperbaiki,
-      belajar dari apa yang sudah terjadi, dan berusaha
-      menjadi lebih baik. Jujur, Adek masih sayang sama Mass. 
-      Perasaan itu nggak tiba-tiba hilang hanya karena sekarang 
-      kita sedang berada di keadaan yang sulit. Masih ada 
-      banyak hal yang Adek harapkan dari kita, masih ada banyak 
-      hal yang ingin Adek perbaiki, dan masih ada bagian dari 
-      diri Adek yang berharap kita bisa kembali menemukan 
-      alasan untuk bertahan.
-    </p>
-
-    <p>
-      Terima kasih sudah menjadi Mass yang Adek kenal, sudah
-      hadir dalam hidup Adek, dan sudah memberikan banyak
-      kenangan yang berarti. Semoga hal-hal baik selalu
-      menyertai Mass, ke mana pun Mass melangkah.
-    </p>
-
-    <p><strong>
-      Panjang umur, sehat selalu, dan bahagia terus, ya, Mass.
-    </strong></p>
-
-    <div class="signature">
-      Dengan segala doa baik dan rasa sayang yang masih Adek simpan,<br><br>
-      With love,<br>
-      <strong>Adek ♡</strong>
-    </div>
-  </section>
-
-  <section class="card">
-    <p class="eyebrow">Chapter Three · A Song for You</p>
-    <h2>Seluruh Nafas Ini ♡</h2>
-    <p>Last Child feat. Gisel</p>
-
-    <div class="music-box">
-      <p class="small">
-        Sebuah lagu untuk menemani kenangan dan doa Adek.
+      <p>
+        Untuk seseorang yang pernah dan masih punya
+        tempat istimewa di hati Adek.
       </p>
-      <audio controls loop>
-        <source src="lagu.mp3..mp3" type="audio/mpeg">
-        Browser ini tidak mendukung pemutar audio.
-      </audio>
+
+      <div class="divider"></div>
+
       <p class="small">
-        Musik akan berfungsi setelah file music.mp3
-        ditambahkan ke folder website.
+        Ada sesuatu yang ingin Adek sampaikan di hari spesial Mass ini.
       </p>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    MADE WITH LOVE · FOR MASS ♡
-  </footer>
+    <!-- BAGIAN 2: LAGU, LANGSUNG DI AWAL -->
+    <section class="card center">
+      <p class="eyebrow">A Song for You</p>
+      <h2>Seluruh Nafas Ini ♡</h2>
+      <p>Last Child feat. Gisel</p>
 
-</main>
+      <div class="music-box">
+        <p>
+          Sebuah lagu untuk menemani kenangan
+          dan doa Adek untuk Mass.
+        </p>
 
-<script>
-function bukaSurat() {
-  const surat = document.getElementById("letter");
-  surat.style.display = "block";
-  surat.scrollIntoView({ behavior: "smooth", block: "start" });
-}
+        <audio controls loop>
+          <source src="lagu.mp3..mp3" type="audio/mpeg">
+          Browser ini tidak mendukung pemutar audio.
+        </audio>
 
-function buatHiasan() {
-  const item = document.createElement("span");
-  item.className = "floaty";
-  item.textContent = Math.random() > 0.55 ? "♡" : "✦";
-  item.style.left = Math.random() * 100 + "vw";
-  item.style.fontSize = (12 + Math.random() * 14) + "px";
-  item.style.color = Math.random() > 0.5 ? "#b79a70" : "#a17c61";
-  item.style.animationDuration = (7 + Math.random() * 5) + "s";
-  document.body.appendChild(item);
-  setTimeout(() => item.remove(), 12000);
-}
+        <p class="small">
+          Tekan tombol putar untuk mendengarkan lagu.
+        </p>
+      </div>
+    </section>
 
-setInterval(buatHiasan, 1000);
-</script>
+    <!-- BAGIAN 3: KENANGAN -->
+    <section class="card">
+      <p class="eyebrow">Little Memories</p>
+      <h2>Beberapa hal yang ingin Adek kenang ♡</h2>
+
+      <p>
+        Setiap kenangan punya ceritanya sendiri.
+        Ada hal-hal sederhana yang mungkin terlihat biasa,
+        tetapi tetap berarti ketika diingat kembali.
+      </p>
+
+      <div class="gallery">
+        <div class="photo">
+          <span>Tambahkan foto pertama di sini ♡</span>
+        </div>
+
+        <div class="photo">
+          <span>Tambahkan foto kedua di sini ♡</span>
+        </div>
+
+        <div class="photo">
+          <span>Tambahkan foto ketiga di sini ♡</span>
+        </div>
+
+        <div class="photo">
+          <span>Tambahkan foto keempat di sini ♡</span>
+        </div>
+      </div>
+
+      <p class="small center" style="margin-top: 16px;">
+        Ganti kotak-kotak ini dengan foto kenangan kalian.
+      </p>
+    </section>
+
+    <!-- BAGIAN 4: DOA ULANG TAHUN -->
+    <section class="card">
+      <p class="eyebrow">My Birthday Wishes</p>
+      <h2>Untuk Mass, di hari spesial ini</h2>
+
+      <p>
+        Selamat ulang tahun, Mass. Semoga di usia yang baru
+        ini Mass selalu diberi kesehatan, hati yang tenang,
+        langkah yang dimudahkan, dan kebahagiaan dalam
+        hal-hal sederhana.
+      </p>
+
+      <p>
+        Semoga apa pun yang sedang Mass perjuangkan
+        perlahan menemukan jalannya. Semoga Mass selalu
+        dikelilingi orang-orang baik dan punya cukup kekuatan
+        untuk melewati hari-hari yang tidak mudah.
+      </p>
+
+      <p>
+        Adek berharap hari ini membawa senyum untuk Mass,
+        karena Mass juga pantas mendapatkan banyak hal baik
+        dalam hidup.
+      </p>
+    </section>
+
+    <!-- BAGIAN 5: SURAT DARI ADEK -->
+    <section class="card center">
+      <p class="eyebrow">A Letter from Adek</p>
+      <h2>Ada surat kecil untuk Mass ♡</h2>
+
+      <p>
+        Ada beberapa hal yang ingin Adek sampaikan
+        dengan tulus, tanpa harus terburu-buru.
+      </p>
+
+      <button class="button" onclick="bukaSurat()">
+        Buka surat dari Adek ♡
+      </button>
+
+      <div class="letter" id="letter">
+        <p>Untuk Mass tersayang,</p>
+
+        <p>
+          Selamat ulang tahun, Mass. Di hari spesial ini,
+          Adek ingin Mass tahu bahwa kehadiran Mass pernah
+          membawa banyak arti dalam hidup Adek.
+        </p>
+
+        <p>
+          Adek tahu mungkin ada hal-hal yang membuat Mass
+          lelah, kecewa, atau merasa bahwa kita tidak bisa
+          melanjutkan semuanya seperti dulu. Adek nggak ingin
+          mengabaikan apa yang Mass rasakan.
+        </p>
+
+        <p>
+          Dan kalau boleh Adek berharap satu hal di hari
+          ulang tahun Mass ini, Adek berharap Mass mau
+          memikirkan sekali lagi keputusan untuk meninggalkan
+          Adek. Adek tidak meminta Mass melupakan semua
+          yang pernah terjadi. Adek hanya berharap kita
+          masih bisa memberi ruang untuk berbicara dan
+          memahami satu sama lain.
+        </p>
+
+        <p>
+          Kalau memang masih ada sedikit ruang di hati Mass,
+          Adek berharap kita bisa mencoba memperbaiki
+          apa yang masih bisa diperbaiki, pelan-pelan,
+          tanpa memaksakan apa pun.
+        </p>
+
+        <p>
+          Namun, apa pun yang Mass rasakan dan putuskan,
+          Adek tetap berharap Mass bahagia dan selalu
+          dikelilingi hal-hal baik.
+        </p>
+
+        <p>
+          Terima kasih untuk kenangan, waktu, dan hal-hal
+          yang pernah kita bagi bersama. Semoga hari ini
+          menjadi awal dari banyak hal baik untuk Mass.
+        </p>
+
+        <p>
+          Selamat ulang tahun sekali lagi, Mass.
+          Adek mendoakan yang terbaik untuk Mass,
+          selalu dengan tulus. ♡
+        </p>
+
+        <p>Dengan sayang,</p>
+        <p><strong>Adek ♡</strong></p>
+      </div>
+    </section>
+
+    <!-- BAGIAN 6: PENUTUP -->
+    <footer>
+      <p>Dibuat dengan tulus, khusus untuk Mass ♡</p>
+      <p>With love, from Adek.</p>
+    </footer>
+
+  </main>
+
+  <script>
+    function bukaSurat() {
+      const surat = document.getElementById("letter");
+      surat.classList.toggle("show");
+
+      if (surat.classList.contains("show")) {
+        setTimeout(() => {
+          surat.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }, 100);
+      }
+    }
+  </script>
 </body>
 </html>
